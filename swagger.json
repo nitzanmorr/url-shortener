@@ -1,23 +1,24 @@
 {
     "swagger": "2.0",
     "info": {
-      "version": "1.0.0",
-      "title": "My User Project CRUD",
-      "description": "My User Project Application API",
-      "license": {
-        "name": "MIT",
-        "url": "https://opensource.org/licenses/MIT"
-      }
+      "version": "1.0",
+      "title": "URL shortener",
+      "description": "A simple api for shortening urls"
     },
     "host": "localhost:3000",
-    "basePath": "/",
+    "basePath": "/short",
     "tags": [
       {
-        "name": "Users",
-        "description": "API for users in the system"
+        "name": "short"
       }
     ],
     "schemes": ["http"],
-    "consumes": ["application/json"],
-    "produces": ["application/json"]
-  }
+    "paths" : {
+        "/": {
+            "get": {
+                "tags": ["short"],
+                "summary": "Takes an "
+            }
+        }
+    }   
+    }

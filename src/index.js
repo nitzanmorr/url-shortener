@@ -4,7 +4,7 @@ import urls from "./models/models.js";
 import shortRouter from "./routes/routes.js";
 
 import swaggerUi from "swagger-ui-express";
-import swaggerDocument from "../swagger.json" assert { type: "json" };
+import swaggerDocument from "../swagger_output.json" assert { type: "json" };
 
 const app = express();
 const port = 3000;
