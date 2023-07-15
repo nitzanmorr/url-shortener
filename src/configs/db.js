@@ -1,10 +1,17 @@
 import { Sequelize } from "sequelize";
 // require("dotenv").config({ path: "../../.env" });
+import dotenv from "dotenv";
+dotenv.config();
 
-const sequelize = new Sequelize("url_shortener", "nitzan", "12345678", {
-  host: "localhost",
-  dialect: "postgres",
-});
+const sequelize = new Sequelize(
+  process.env.DB_NAME,
+  process.env.DB_USER,
+  String(process.env.DB_PASSWORD),
+  {
+    host: process.env.DB_HOST,
+    dialect: "postgres",
+  }
+);
 
 const testDbConnection = async () => {
   try {

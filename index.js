@@ -1,13 +1,15 @@
 import express from "express";
-import { sq, testDbConnection } from "./configs/db.js";
-import urls from "./models/models.js";
-import shortRouter from "./routes/routes.js";
-
+import { sq, testDbConnection } from "./src/configs/db.js";
+import urls from "./src/models/models.js";
+import shortRouter from "./src/routes/routes.js";
 import swaggerUi from "swagger-ui-express";
-import swaggerDocument from "../swagger_output.json" assert { type: "json" };
+import swaggerDocument from "./swagger_output.json" assert { type: "json" };
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
-const port = 3000;
+const port = process.env.APP_PORT;
 
 app.get("/", (req, res) => {
   testDbConnection();

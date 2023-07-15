@@ -1,4 +1,4 @@
-import app from "../index.js";
+import app from "../../index.js";
 import { newUrl } from "../services/businessService.js";
 import { getOriginal } from "../services/dbService.js";
 import express from "express";
