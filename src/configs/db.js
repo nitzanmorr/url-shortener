@@ -1,5 +1,4 @@
 import { Sequelize } from "sequelize";
-// require("dotenv").config({ path: "../../.env" });
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -22,5 +21,4 @@ const testDbConnection = async () => {
   }
 };
 
-// module.exports = { sq: sequelize, testDbConnection };
 export { sequelize as sq, testDbConnection };

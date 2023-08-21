@@ -23,4 +23,4 @@ const getShortUrl = async (originalUrl) => {
   }
 };
 
-export { newUrl, getShortUrl };
+export { newUrl };
